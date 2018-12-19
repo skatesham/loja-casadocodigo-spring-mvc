@@ -1,8 +1,8 @@
-package br.sham.spring.casadocodigo.conf;
+package br.com.casadocodigo.loja.conf;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class SpringMVCConfiguration extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletInitializer{
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
@@ -11,7 +11,7 @@ public class SpringMVCConfiguration extends AbstractAnnotationConfigDispatcherSe
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] {AppWebConfiguration.class};
+		return new Class[] {AppWebConfiguration.class, JPAConfiguration.class};
 	}
 
 	@Override
@@ -19,6 +19,4 @@ public class SpringMVCConfiguration extends AbstractAnnotationConfigDispatcherSe
 		return new String[] {"/"};
 	}
 
-	
-	
 }
