@@ -1,0 +1,15 @@
+package br.com.casadocodigo.loja.models;
+
+import java.math.BigDecimal;
+
+import javax.persistence.Embeddable;
+
+import lombok.Data;
+
+@Embeddable
+public @Data class Preco {
+	
+    private BigDecimal valor;
+    private TipoPreco tipo;
+    
+}
