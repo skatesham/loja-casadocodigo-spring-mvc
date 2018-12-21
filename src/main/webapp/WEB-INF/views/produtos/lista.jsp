@@ -19,7 +19,7 @@
 		<p class="alert alert-success">${sucesso}</p>
 		<div>
 		<a class=" mt-2 mb-2 btn btn-dark btn-block" href="${s:mvcUrl('PC#form').build()}" role="button">Criar Produto</a>
-			<table class="table">
+			<table class="table table-bordered table-striped table-hover">
 				<tr>
 					<th>Título</th>
 					<th>Descrição</th>

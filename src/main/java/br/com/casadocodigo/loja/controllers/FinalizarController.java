@@ -29,7 +29,7 @@ public class FinalizarController {
 			String uri = "http://book-payment.herokuapp.com/payment";
 			String response = restTemplate.postForObject(uri, new DadosPagamento(carrinho.getTotal()), String.class);
 			carrinho.limpar();
-			ModelAndView modelAndView = new ModelAndView("redirect:/produtos");
+			ModelAndView modelAndView = new ModelAndView("redirect:/");
 			model.addFlashAttribute("sucesso", response);
 
 			return modelAndView;

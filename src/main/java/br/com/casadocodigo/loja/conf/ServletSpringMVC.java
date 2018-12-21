@@ -1,4 +1,4 @@
- package br.com.casadocodigo.loja.conf;
+package br.com.casadocodigo.loja.conf;
 
 import javax.servlet.Filter;
 import javax.servlet.MultipartConfigElement;
@@ -11,7 +11,7 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return null;
+		return new Class[] { SecurityConfiguration.class };
 	}
 
 	// classes de configuração do sistema
@@ -26,7 +26,6 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 		return new String[] { "/" };
 	}
 
-	
 	// Ativivando filtros no Sistema
 	@Override
 	protected Filter[] getServletFilters() {
@@ -40,7 +39,5 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 	protected void customizeRegistration(Dynamic registration) {
 		registration.setMultipartConfig(new MultipartConfigElement(""));
 	}
-	
-	
 
 }

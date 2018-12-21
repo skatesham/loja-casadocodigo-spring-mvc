@@ -67,7 +67,7 @@
 	</header>
 	<nav class="categories-nav">
 		<ul class="container">
-			<li class="category"><a href="/casadocodigo/produtos">Home</a></li>
+			<li class="category"><a href="/casadocodigo/">Home</a></li>
 			<li class="category"><a href="/collections/livros-de-agile">
 					Agile </a></li>
 			<li class="category"><a href="/collections/livros-de-front-end">
