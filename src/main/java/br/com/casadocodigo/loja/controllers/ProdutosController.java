@@ -35,7 +35,7 @@ public class ProdutosController {
 	@Autowired
 	private FileSaver fileSaver;
 
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@PreAuthorize("hasRole('ADMIN')")
 	@RequestMapping("/form")
 	public ModelAndView form(Produto produto) {
 		ModelAndView modelAndView = new ModelAndView("/produtos/form");
