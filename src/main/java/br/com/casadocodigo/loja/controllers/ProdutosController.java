@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -34,6 +35,7 @@ public class ProdutosController {
 	@Autowired
 	private FileSaver fileSaver;
 
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping("/form")
 	public ModelAndView form(Produto produto) {
 		ModelAndView modelAndView = new ModelAndView("/produtos/form");
@@ -62,6 +64,7 @@ public class ProdutosController {
 		return new ModelAndView("redirect:produtos");
 	}
 
+	//@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView listar() {
 		List<Produto> produtos = dao.listar();

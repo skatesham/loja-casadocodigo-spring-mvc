@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="security"%>
 
 <!DOCTYPE html>
 <html>
@@ -52,19 +54,24 @@
 			<div id="header-content">
 				<nav id="main-nav">
 					<ul class="clearfix">
-
-						<li><a href="${s:mvcUrl('PC#listar').build() }"
-							rel="nofollow">Listagem de Produtos</a></li>
+						<security:authorize access="hasRole('ROLE_ADMIN')">
+							<li><a href="${s:mvcUrl('PC#listar').build() }"
+								rel="nofollow">Listagem de Produtos</a></li>
+						</security:authorize>
 						<li><a href="${s:mvcUrl('PC#form').build() }" rel="nofollow">Cadastro
 								de Produtos</a></li>
-
-				 		<li><a href="${s:mvcUrl('CCC#itens').build() }"
-							rel="nofollow">Carrinho (${carrinhoCompras.quantidade })</a></li>
+						<li><a href="/casadocodigo/carrinho" rel="nofollow">Carrinho</a></li>
 						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre
 								Nós</a></li>
-						<li><a href="/pages/perguntas-frequentes" rel="nofollow">Perguntas
-								Frequentes</a></li>
+						<li class="nav-item"><a href="<c:url value="/logout" />">Sair</a></span>
+						</li>
 					</ul>
+					<security:authorize access="isAuthenticated()">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><security:authentication
+										property="principal.username" /></a></li>
+						</ul>
+					</security:authorize>
 				</nav>
 			</div>
 		</div>
@@ -103,9 +110,7 @@
 					class="block clearfix">
 						<h2 class="product-title">${produto.titulo }</h2> <%
  	String ofline = "https://cdn.shopify.com/s/files/1/0155/7645/products/java8-featured_large.png?v=1411490181";
- %>
-						<img width="143" height="202"
-						src="${produto.sumarioPath == null ? "
+ %> <img width="143" height="202" src="${produto.sumarioPath == null ? "
 						https://cdn.shopify.com/s/files/1/0155/7645/products/java8-featured_large.png?v=1411490181
 						" : produto.sumarioPath }" alt="Java 8 Prático"
 						title="Java 8 Prático" /> <small class="buy-button">Compre</small>
@@ -227,6 +232,11 @@
 			</div>
 		</div>
 	</footer>
-
+	<security:authorize access="isAuthenticated()">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#"><security:authentication
+						property="principal" /></a></li>
+		</ul>
+	</security:authorize>
 </body>
 </html>

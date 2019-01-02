@@ -109,6 +109,7 @@ public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 		
 	}
 	
+	// Ativando a busca de view
 	@Bean
 	public ViewResolver contentNegotiationViewResolver(ContentNegotiationManager manager) {
 		List<ViewResolver> viewResolvers = new ArrayList<>();
