@@ -17,8 +17,7 @@ public @Data class Role implements GrantedAuthority {
 
 	@Override
 	public String getAuthority() {
-		return this.getNome();
+		return this.nome;
 	}
-	
-	
+
 }
