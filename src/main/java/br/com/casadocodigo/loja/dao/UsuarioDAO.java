@@ -41,5 +41,10 @@ public class UsuarioDAO implements UserDetailsService {
 
 		return usuarios.get(0);
 	}
-	
+
+	public void gravar(Usuario usuario) {
+		entityManager.persist(usuario);
+		System.out.println("Usuario Criado com Sucesso!");
+	}
+
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -26,8 +27,8 @@ public @Data class Usuario implements UserDetails {
 
 	private String nome;
 
-	@OneToMany(fetch = FetchType.EAGER)
-	List<Role> roles = new ArrayList<>();
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+	List<Role> roles = new ArrayList<Role>();
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

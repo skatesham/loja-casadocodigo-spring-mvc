@@ -15,7 +15,8 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { SecurityConfiguration.class, AppWebConfiguration.class, JPAConfiguration.class, JPAProductionConfiguration.class };
+		return new Class[] { SecurityConfiguration.class, AppWebConfiguration.class, JPAConfiguration.class,
+				JPAProductionConfiguration.class };
 	}
 
 	// classes de configuração do sistema
@@ -35,7 +36,8 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 	protected Filter[] getServletFilters() {
 		CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();
 		encodingFilter.setEncoding("UTF-8");
-		return new Filter[] { encodingFilter, new OpenEntityManagerInViewFilter()}; /* para entidade continuar aberta até que a view seja iniciada */
+		return new Filter[] { encodingFilter,
+				new OpenEntityManagerInViewFilter() }; /* para entidade continuar aberta até que a view seja iniciada */
 	}
 
 	// Ativando recebimento de multipart em formalários
@@ -44,13 +46,11 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 		registration.setMultipartConfig(new MultipartConfigElement(""));
 	}
 
-	/*
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		super.onStartup(servletContext);
 		servletContext.addListener(new RequestContextListener());
 		servletContext.setInitParameter("spring.profiles.active", "dev");
 	}
-	*/
 
 }
