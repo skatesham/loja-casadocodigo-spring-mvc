@@ -25,8 +25,8 @@ Projeto web com Spring MVC
 https://loja-spring-mvc.herokuapp.com
 
 ## Links dos Cursos
-[Curso Spring MVC I: Criando aplicações web](https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web)
-[Curso Spring MVC II: Integração, cache, segurança e templates](https://cursos.alura.com.br/course/springmvc-2-integracao-cache-seguranca-e-templates)
+1. [Curso Spring MVC I: Criando aplicações web](https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web)
+2. [Curso Spring MVC II: Integração, cache, segurança e templates](https://cursos.alura.com.br/course/springmvc-2-integracao-cache-seguranca-e-templates)
 
 ### Certificados
 ![alt text](https://raw.githubusercontent.com/skatesham/loja-casadocodigo-spring-mvc/master/src/main/webapp/resources/imagens/Certificado%20-%20Spring%20MVC%20I.png)  
