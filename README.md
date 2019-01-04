@@ -24,8 +24,12 @@ Projeto web com Spring MVC
 ## Página de deploy
 https://loja-spring-mvc.herokuapp.com
 
-## [Link do Curso](https://cursos.alura.com.br/course/springmvc-2-integracao-cache-seguranca-e-templates)
+## Links dos Cursos
+[Curso Spring MVC I: Criando aplicações web](https://cursos.alura.com.br/course/spring-mvc-1-criando-aplicacoes-web)
+[Curso Spring MVC II: Integração, cache, segurança e templates](https://cursos.alura.com.br/course/springmvc-2-integracao-cache-seguranca-e-templates)
 
 ### Certificados
+![alt text](https://raw.githubusercontent.com/skatesham/loja-casadocodigo-spring-mvc/master/src/main/webapp/resources/imagens/Certificado%20-%20Spring%20MVC%20I.png)
+![alt text](https://raw.githubusercontent.com/skatesham/loja-casadocodigo-spring-mvc/master/src/main/webapp/resources/imagens/Certificado%20Spring%20MVC%20II.png)
 
 #### Desenvolvido por Sham Vinicius Fiorin
