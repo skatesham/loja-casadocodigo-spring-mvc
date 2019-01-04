@@ -30,6 +30,7 @@ https://loja-spring-mvc.herokuapp.com
 
 ### Certificados
 ![alt text](https://raw.githubusercontent.com/skatesham/loja-casadocodigo-spring-mvc/master/src/main/webapp/resources/imagens/Certificado%20-%20Spring%20MVC%20I.png)  
+
 ![alt text](https://raw.githubusercontent.com/skatesham/loja-casadocodigo-spring-mvc/master/src/main/webapp/resources/imagens/Certificado%20Spring%20MVC%20II.png)
 
 #### Desenvolvido por Sham Vinicius Fiorin
