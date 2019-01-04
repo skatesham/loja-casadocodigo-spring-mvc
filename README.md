@@ -29,7 +29,7 @@ https://loja-spring-mvc.herokuapp.com
 [Curso Spring MVC II: Integração, cache, segurança e templates](https://cursos.alura.com.br/course/springmvc-2-integracao-cache-seguranca-e-templates)
 
 ### Certificados
-![alt text](https://raw.githubusercontent.com/skatesham/loja-casadocodigo-spring-mvc/master/src/main/webapp/resources/imagens/Certificado%20-%20Spring%20MVC%20I.png)
+![alt text](https://raw.githubusercontent.com/skatesham/loja-casadocodigo-spring-mvc/master/src/main/webapp/resources/imagens/Certificado%20-%20Spring%20MVC%20I.png)  
 ![alt text](https://raw.githubusercontent.com/skatesham/loja-casadocodigo-spring-mvc/master/src/main/webapp/resources/imagens/Certificado%20Spring%20MVC%20II.png)
 
 #### Desenvolvido por Sham Vinicius Fiorin
